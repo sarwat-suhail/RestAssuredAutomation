@@ -2,7 +2,7 @@ package com.restassured.libraryAPI;
 
 import org.testng.annotations.Test;
 
-import com.restassured.commonfiles.ReusableMethods;
+import com.restassured.ReusableMethods;
 
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
@@ -30,7 +30,7 @@ public class LibraryApiAddBookTest {
 		then().assertThat().statusCode(200).
 		extract().response();
 		
-		JsonPath rep=com.restassured.commonfiles.ReusableMethods.rawToJson(resp);
+		JsonPath rep=com.restassured.ReusableMethods.rawToJson(resp);
 		String id=rep.get("ID");
 		System.out.println(id);
 		

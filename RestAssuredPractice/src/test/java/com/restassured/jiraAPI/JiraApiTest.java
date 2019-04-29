@@ -5,14 +5,14 @@ import static io.restassured.RestAssured.given;
 
 import org.testng.annotations.Test;
 
-import com.restassured.commonfiles.Resources;
-import com.restassured.commonfiles.ReusableMethods;
+import com.restassured.Resources;
+import com.restassured.ReusableMethods;
 
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 
-public class JiraApiTest extends com.restassured.base.Base{
+public class JiraApiTest extends com.restassured.Base{
 
 	
 	@Test

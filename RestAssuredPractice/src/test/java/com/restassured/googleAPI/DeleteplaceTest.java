@@ -10,7 +10,7 @@ import java.util.Properties;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import com.restassured.commonfiles.Resources;
+import com.restassured.Resources;
 
 import io.restassured.RestAssured;
 

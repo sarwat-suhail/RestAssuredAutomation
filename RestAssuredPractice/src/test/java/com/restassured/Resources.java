@@ -1,4 +1,4 @@
-package com.restassured.commonfiles;
+package com.restassured;
 
 import com.restassured.googleAPI.DeleteplaceTest;
 

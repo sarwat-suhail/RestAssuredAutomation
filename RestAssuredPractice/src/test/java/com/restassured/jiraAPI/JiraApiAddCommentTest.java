@@ -2,9 +2,9 @@ package com.restassured.jiraAPI;
 
 import org.testng.annotations.Test;
 
-import com.restassured.base.Base;
-import com.restassured.commonfiles.Resources;
-import com.restassured.commonfiles.ReusableMethods;
+import com.restassured.Base;
+import com.restassured.Resources;
+import com.restassured.ReusableMethods;
 
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;

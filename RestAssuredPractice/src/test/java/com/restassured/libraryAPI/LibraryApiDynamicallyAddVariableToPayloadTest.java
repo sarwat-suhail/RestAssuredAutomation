@@ -4,7 +4,7 @@ import static io.restassured.RestAssured.given;
 
 import org.testng.annotations.Test;
 
-import com.restassured.commonfiles.Resources;
+import com.restassured.Resources;
 
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
@@ -17,13 +17,13 @@ public class LibraryApiDynamicallyAddVariableToPayloadTest {
 	RestAssured.baseURI="http://216.10.245.166";
 	
 	Response resp=given().
-	body(com.restassured.commonfiles.Resources.addBook("asdfw","12345" )).
+	body(com.restassured.Resources.addBook("asdfw","12345" )).
 	when().
 	post("/Library/Addbook.php ").
 	then().assertThat().statusCode(200).
 	extract().response();
 	
-	JsonPath rep=com.restassured.commonfiles.ReusableMethods.rawToJson(resp);
+	JsonPath rep=com.restassured.ReusableMethods.rawToJson(resp);
 	 id=rep.get("ID");
 	System.out.println(id);
 	}
@@ -34,13 +34,13 @@ public class LibraryApiDynamicallyAddVariableToPayloadTest {
 		RestAssured.baseURI="http://216.10.245.166";
 		
 		Response resp=given().
-		body(com.restassured.commonfiles.Resources.deleteBook(id)).
+		body(com.restassured.Resources.deleteBook(id)).
 		when().
 		post("/Library/DeleteBook.php").
 		then().assertThat().statusCode(200).
 		extract().response();
 		
-		JsonPath rep=com.restassured.commonfiles.ReusableMethods.rawToJson(resp);
+		JsonPath rep=com.restassured.ReusableMethods.rawToJson(resp);
 		String id=rep.get("msg");
 		System.out.println(id);
 		

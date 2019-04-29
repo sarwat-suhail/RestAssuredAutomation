@@ -1,8 +1,8 @@
 package com.restassured.googleAPI;
 import org.testng.annotations.Test;
 
-import com.restassured.commonfiles.Resources;
-import com.restassured.commonfiles.ReusableMethods;
+import com.restassured.Resources;
+import com.restassured.ReusableMethods;
 
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;

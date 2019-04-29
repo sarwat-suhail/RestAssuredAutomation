@@ -1,4 +1,4 @@
-package com.restassured.base;
+package com.restassured;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -6,11 +6,9 @@ import java.util.Properties;
 
 import org.testng.annotations.BeforeTest;
 
-import com.restassured.commonfiles.ReusableMethods;
-
 public class Base {
 
-	com.restassured.commonfiles.ReusableMethods rm;
+	com.restassured.ReusableMethods rm;
 	public Properties prop;
 		@BeforeTest
 		public void init() throws IOException {
@@ -19,7 +17,7 @@ public class Base {
 			
 		prop.load(fis);
 		
-		 rm=new com.restassured.commonfiles.ReusableMethods();
+		 rm=new com.restassured.ReusableMethods();
 			rm.setProp(prop);
 			
 		

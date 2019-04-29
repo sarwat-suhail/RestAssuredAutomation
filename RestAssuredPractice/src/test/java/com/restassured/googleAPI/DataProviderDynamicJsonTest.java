@@ -16,13 +16,13 @@ public class DataProviderDynamicJsonTest {
 	RestAssured.baseURI="http://216.10.245.166";
 	
 	Response resp=given().
-	body(com.restassured.commonfiles.Resources.addBook(isbn,aisle )).
+	body(com.restassured.Resources.addBook(isbn,aisle )).
 	when().
 	post("/Library/Addbook.php ").
 	then().assertThat().statusCode(200).
 	extract().response();
 	
-	JsonPath rep=com.restassured.commonfiles.ReusableMethods.rawToJson(resp);
+	JsonPath rep=com.restassured.ReusableMethods.rawToJson(resp);
 	 id=rep.get("ID");
 	System.out.println(id);
 	}
@@ -32,13 +32,13 @@ public class DataProviderDynamicJsonTest {
 		RestAssured.baseURI="http://216.10.245.166";
 		
 		Response resp=given().
-		body(com.restassured.commonfiles.Resources.deleteBook(isbn+aisle)).
+		body(com.restassured.Resources.deleteBook(isbn+aisle)).
 		when().
 		post("/Library/DeleteBook.php").
 		then().assertThat().statusCode(200).
 		extract().response();
 		
-		JsonPath rep=com.restassured.commonfiles.ReusableMethods.rawToJson(resp);
+		JsonPath rep=com.restassured.ReusableMethods.rawToJson(resp);
 		String id=rep.get("msg");
 		System.out.println(id);
 		
