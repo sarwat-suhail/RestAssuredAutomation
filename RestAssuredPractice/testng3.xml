@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="com.restassured.jiraAPI.JiraApi"/>
+      <class name="com.restassured.twitterAPI.GetTweet"/>
+      <class name="com.restassured.libraryAPI.LibraryApiAddBook"/>
+      <class name="com.restassured.libraryAPI.LibraryApiDynamicallyAddVariableToPayload"/>
+      <class name="com.restassured.googleAPI.Basics3"/>
+      <class name="com.restassured.googleAPI.Basics2"/>
+      <class name="com.restassured.jiraAPI.JiraApiUpdateComment"/>
+      <class name="com.restassured.googleAPI.ParsingJsonToExtractValues"/>
+      <class name="com.restassured.libraryAPI.ValidationOfResponseInXml"/>
+      <class name="com.restassured.googleAPI.DataProviderDynamicJson"/>
+      <class name="com.restassured.googleAPI.Basics"/>
+      <class name="com.restassured.googleAPI.Deleteplace"/>
+      <class name="com.restassured.jiraAPI.JiraApiAddComment"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
